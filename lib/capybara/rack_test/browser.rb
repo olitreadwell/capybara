@@ -12,7 +12,13 @@ class Capybara::RackTest::Browser
   end
 
   def app
-    driver.app
+    @app ||= begin
+      real_app = driver.app
+      proc do |env|
+        @last_request_env = env.dup
+        real_app.call(env)
+      end
+    end
   end
 
   def options
@@ -28,7 +34,7 @@ class Capybara::RackTest::Browser
 
   def refresh
     reset_cache!
-    request(last_request.fullpath, last_request.env)
+    request(last_request.fullpath, @last_request_env)
   end
 
   def submit(method, path, attributes, content_type: nil)
