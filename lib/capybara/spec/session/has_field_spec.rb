@@ -95,7 +95,7 @@ Capybara::SpecHelper.spec '#has_field' do
       expect(@session).not_to have_field('Languages', type: 'textarea')
     end
 
-    it 'it can find type="hidden" elements if explicity specified' do
+    it 'it can find type="hidden" elements if explicitly specified' do
       expect(@session).to have_field('form[data]', with: 'TWTW', type: 'hidden')
     end
   end

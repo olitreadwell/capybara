@@ -388,7 +388,7 @@ See the section on adding and configuring drivers.
 ### <a name="selenium"></a>Selenium
 
 Capybara supports [Selenium 3.5+
-(Webdriver)](https://www.seleniumhq.org/projects/webdriver/).
+(Webdriver)](https://www.selenium.dev/documentation/webdriver/).
 In order to use Selenium, you'll need to install the `selenium-webdriver` gem,
 and add it to your Gemfile if you're using bundler.
 
@@ -801,7 +801,7 @@ page.find(:table_row, 'A' => '1') == page.find(:table_row, 'B' => '2') # => true
 ### <a name="selectors-filters"></a> Filters
 
 All filters are optional. The supported set of keys is a mixture of both global
-and context-specific filters.The supported types of values depend on the
+and context-specific filters. The supported types of values depend on the
 context:
 
 ```ruby

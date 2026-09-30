@@ -117,7 +117,7 @@ Capybara::SpecHelper.spec '#click_button' do
         expect(results['pets']).not_to include('cat')
       end
 
-      it "should default checkbox value to 'on' if none specififed" do
+      it "should default checkbox value to 'on' if none specified" do
         expect(results['valueless_checkbox']).to eq('on')
       end
 
