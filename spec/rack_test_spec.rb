@@ -55,6 +55,21 @@ RSpec.describe Capybara::Session do # rubocop:disable RSpec/MultipleDescribes
       end
     end
 
+    describe '#refresh' do
+      it 'should not include changes the app made to the request env during the previous request' do
+        app = proc do |env|
+          status = env['capybara.refresh_test'] ? 500 : 200
+          env['capybara.refresh_test'] = true
+          [status, { 'Content-Type' => 'text/html' }, ['']]
+        end
+        refresh_session = described_class.new(:rack_test, app)
+        refresh_session.visit '/'
+        expect(refresh_session.status_code).to eq(200)
+        refresh_session.refresh
+        expect(refresh_session.status_code).to eq(200)
+      end
+    end
+
     describe '#click_link' do
       after do
         session.driver.options[:respect_data_method] = false
