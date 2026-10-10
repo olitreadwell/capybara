@@ -1,5 +1,5 @@
 # teamcapybara/capybara context
-> refreshed 2026-09-30 | upstream default: master @ 15b5fdb76e972e9623d5af2123ed3755594f9732
+> refreshed 2026-10-10 | upstream default: master @ 265d2d17a6b8f0c2a9c5cfd0da3aa2ad4e0b9c39
 
 ## Identity & policies
 - upstream: teamcapybara/capybara, default branch `master`, primary language Ruby, English-first (yes - README/CONTRIBUTING/issues all English)
@@ -32,6 +32,9 @@
 - 2026-08-26 fork #1 - pr-updated (audit sweep, body gate)
 - 2026-09-25..27 - engine-failure x3 (run.sh exited 1, no trace; not a repo problem)
 - 2026-09-30 self-found trivial cleanup - pr-opened (fork #2) - dead seleniumhq.org link + README missing space + spec-description typos (`specififed`, `explicity`, `doesnt`, `instaed`, `fullfilled`, `querys`)
+- 2026-10-10 self-found trivial cleanup - pr-opened (fork #3, `fix-typos-and-stale-ruby-version`) - README stale min Ruby (3.0.0 -> 3.2.0, gemspec says >= 3.2.0) + `evaluate_script_asnyc` error string in lib/capybara/driver/base.rb + 4 History.md misspellings + spec filename rename `regexp_dissassembler_spec.rb` -> `regexp_disassembler_spec.rb` + 3 spec-comment typos (`jus`, `processe`). LESSON: twalpole explicitly reverted test-name/description spelling changes in upstream PR #2584 ("Other drivers use the suite ... changing large numbers of them outside of a major release isn't great"), so spec file RENAMES and COMMENT fixes are fine but do NOT touch `it`/`describe` description text.
 
 ## Mined gaps (discovered, not yet attempted)
-- none open right now; the trivial typo/link pass for 2026-09-30 found 8 genuine fixes and shipped them in one PR
+- 2026-10-10 `code.google.com/p/selenium/issues/detail?id=7405` in History.md redirects to issues.chromium.org (works, 302) - left alone, not dead
+- 2026-10-10 remaining genuine typo surface is thin; most wrong-word cases outside the fixed set are inside test descriptions (off-limits per #2584) or historical History.md entries where the quote matches a release title
+- test-name spelling changes: BLOCKED upstream (see gap ledger 2026-10-10 lesson)
