@@ -260,7 +260,7 @@ module Capybara
 
       def parameter_names(block)
         key_types = %i[key keyreq]
-        # user filter_map when we drop dupport for 2.6
+        # use filter_map when we drop support for 2.6
         # block.parameters.select { |(type, _name)| key_types.include? type }.map { |(_, name)| name }
         block.parameters.filter_map { |(type, name)| name if key_types.include? type }
       end

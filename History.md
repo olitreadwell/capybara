@@ -1,7 +1,7 @@
 # Version 3.40.0
 Release date: 2024-01-26
 
-### Changned
+### Changed
 
 * Dropped support for Ruby 2.7, 3.0+ is now required
 * Dropped support for Selenium < 4.8
@@ -1538,7 +1538,7 @@ Release date: 2013-04-09
   [Thomas Walpole]
 * `page.title` returns the page title. [Terry Progetto]
 * `has_title?` matcher to assert on page title. [Jonas Nicklas]
-* The gem is now signed with a certicficate. The public key is available in the
+* The gem is now signed with a certificate. The public key is available in the
   repo. [Jonas Nicklas]
 * `:select` and `:textarea` are valid options for the `:type` filter on `find_field`
   and `has_field?`. [Yann Plancqueel]
@@ -1848,7 +1848,7 @@ Release date: 2011-01-21
 
 * New click_on alias for click_link_or_button, shorter yet unambiguous. [Jonas Nicklas]
 * Finders now accept :visible => false which will find all elements regardless of Capybara.ignore_hidden_elements [Jonas Nicklas]
-* Configure how the server is started via Capybara.server { |app, port| ... }. [John Firebough]
+* Configure how the server is started via Capybara.server { |app, port| ... }. [John Firebaugh]
 * Added :between, :maximum and :minimum options to has_selector and friends [James B. Byrne]
 * New Capybara.string util function which allows matchers on arbitrary strings, mostly for helper and view specs [David Chelimsky and Jonas Nicklas]
 * Server boot timeout is now configurable, via Capybara.server_boot_timeout [Adam Cigánek]
