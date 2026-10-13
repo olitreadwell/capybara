@@ -19,7 +19,7 @@ else
 end
 
 # Chromedriver 77 requires setting this for headless mode on linux
-# Different versions of Chrome/selenium-webdriver require setting differently - jus set them all
+# Different versions of Chrome/selenium-webdriver require setting differently - just set them all
 browser_options.add_preference('download.default_directory', Capybara.save_path)
 browser_options.add_preference(:download, default_directory: Capybara.save_path)
 
