@@ -240,7 +240,7 @@ RSpec.shared_examples 'Capybara::Session' do |session, mode|
       end
 
       it 'handles namespaces in xhtml' do
-        pending "IE 11 doesn't handle all XPath querys (namespace-uri, etc)" if ie?(session)
+        pending "IE 11 doesn't handle all XPath queries (namespace-uri, etc)" if ie?(session)
         session.visit '/with_namespace'
         rect = session.find(:css, 'div svg rect:first-of-type')
         expect(rect.path).to eq("/HTML/BODY[1]/DIV[1]/*[local-name()='svg' and namespace-uri()='http://www.w3.org/2000/svg'][1]/*[local-name()='rect' and namespace-uri()='http://www.w3.org/2000/svg'][1]")
@@ -248,7 +248,7 @@ RSpec.shared_examples 'Capybara::Session' do |session, mode|
       end
 
       it 'handles default namespaces in html5' do
-        pending "IE 11 doesn't handle all XPath querys (namespace-uri, etc)" if ie?(session)
+        pending "IE 11 doesn't handle all XPath queries (namespace-uri, etc)" if ie?(session)
         session.visit '/with_html5_svg'
         rect = session.find(:css, 'div svg rect:first-of-type')
         expect(rect.path).to eq("/HTML/BODY[1]/DIV[1]/*[local-name()='svg' and namespace-uri()='http://www.w3.org/2000/svg'][1]/*[local-name()='rect' and namespace-uri()='http://www.w3.org/2000/svg'][1]")
@@ -256,7 +256,7 @@ RSpec.shared_examples 'Capybara::Session' do |session, mode|
       end
 
       it 'handles case sensitive element names' do
-        pending "IE 11 doesn't handle all XPath querys (namespace-uri, etc)" if ie?(session)
+        pending "IE 11 doesn't handle all XPath queries (namespace-uri, etc)" if ie?(session)
         session.visit '/with_namespace'
         els = session.all(:css, 'div *', visible: :all)
         expect { els.map(&:path) }.not_to raise_error

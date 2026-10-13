@@ -58,7 +58,7 @@ module Capybara::Selenium::Driver::EdgeDriver
     if @browser.respond_to?(:download_path=)
       @browser.download_path = path
     else
-      # Not yet implemented in seleniun-webdriver for edge so do it ourselves
+      # Not yet implemented in selenium-webdriver for edge so do it ourselves
       execute_cdp('Page.setDownloadBehavior', behavior: 'allow', downloadPath: path)
     end
   end
