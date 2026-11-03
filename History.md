@@ -1,7 +1,7 @@
 # Version 3.40.0
 Release date: 2024-01-26
 
-### Changned
+### Changed
 
 * Dropped support for Ruby 2.7, 3.0+ is now required
 * Dropped support for Selenium < 4.8
@@ -1395,7 +1395,7 @@ Release date: 2014-07-03
 * More descriptive have_text error messages [Andrey Botalov]
 * New modal API ('accept_alert', 'accept_confirm', 'dismiss_confirm', 'accept_prompt', 'dismiss_prompt') - [Mike Pack, Thomas Walpole]
 * Warning when attempting to set contents of a readonly element
-* Suport for and/or compounding of Capybara's RSpec matchers for RSpec 3 [Thomas Walpole]
+* Support for and/or compounding of Capybara's RSpec matchers for RSpec 3 [Thomas Walpole]
 * :fill_options option for 'fill_in' method that propagates to 'set' to allow for driver specific modification of how fields are filled in [Gabriel Sobrinho, Thomas Walpole]
 * Improved selector/filter description in failure messages [Thomas Walpole]
 
@@ -1416,7 +1416,7 @@ Release date: 2014-06-02
 * New window management API [Andrey Botalov]
 * Speed improvement for visible text detection in RackTest [Thomas Walpole]
   Thanks to Phillipe Creux for instigating this
-* RSpec 3 compatability
+* RSpec 3 compatibility
 * 'save_and_open_screenshot' functionality [Greg Lazarev]
 * Server errors raised on visit and synchronize [Jonas Nicklas]
 
@@ -1477,7 +1477,7 @@ Release date: 2013-11-21
 * save_page always returns a full path, fixes problems with Launchy [Jonas Nicklas]
 * Selenium driver's `quit` method does nothing when browser hasn't been loaded
   [randoum]
-* Capybara's WEBRick server now propertly respects the server_host option
+* Capybara's WEBRick server now properly respects the server_host option
   [Dmitry Vorotilin]
 * gemspec now includes license information [Jonas Nicklas]
 
@@ -1538,7 +1538,7 @@ Release date: 2013-04-09
   [Thomas Walpole]
 * `page.title` returns the page title. [Terry Progetto]
 * `has_title?` matcher to assert on page title. [Jonas Nicklas]
-* The gem is now signed with a certicficate. The public key is available in the
+* The gem is now signed with a certificate. The public key is available in the
   repo. [Jonas Nicklas]
 * `:select` and `:textarea` are valid options for the `:type` filter on `find_field`
   and `has_field?`. [Yann Plancqueel]
@@ -1784,7 +1784,7 @@ Release date: 2011-08-12
 
 ### Fixed
 
-* Dependend on selenium-webdriver ~>2.0 and fix deprecations [Thomas Walpole, Jo Liss]
+* Dependent on selenium-webdriver ~>2.0 and fix deprecations [Thomas Walpole, Jo Liss]
 * Depend on Launch 2.0 [Jeremy Hinegardner]
 * Rack-Test ignores fill in on fields with maxlength=""
 
@@ -1848,7 +1848,7 @@ Release date: 2011-01-21
 
 * New click_on alias for click_link_or_button, shorter yet unambiguous. [Jonas Nicklas]
 * Finders now accept :visible => false which will find all elements regardless of Capybara.ignore_hidden_elements [Jonas Nicklas]
-* Configure how the server is started via Capybara.server { |app, port| ... }. [John Firebough]
+* Configure how the server is started via Capybara.server { |app, port| ... }. [John Firebaugh]
 * Added :between, :maximum and :minimum options to has_selector and friends [James B. Byrne]
 * New Capybara.string util function which allows matchers on arbitrary strings, mostly for helper and view specs [David Chelimsky and Jonas Nicklas]
 * Server boot timeout is now configurable, via Capybara.server_boot_timeout [Adam Cigánek]

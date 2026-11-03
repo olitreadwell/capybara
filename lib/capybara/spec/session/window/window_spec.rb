@@ -160,7 +160,7 @@ Capybara::SpecHelper.spec Capybara::Window, requires: [:windows] do
 
       max_width, max_height = @session.current_window.size
 
-      # maximize behavior is window manage dependant, so just make sure it increases in size
+      # maximize behavior is window manage dependent, so just make sure it increases in size
       expect(max_width).to be > start_width
       expect(max_height).to be > start_height
     end

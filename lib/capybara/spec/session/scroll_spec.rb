@@ -75,7 +75,7 @@ Capybara::SpecHelper.spec '#scroll_to', requires: [:scroll] do
     scrolling_element.scroll_to(el, align: :center)
     el_center = el.evaluate_script('(function(rect){return (rect.top + rect.bottom)/2})(this.getBoundingClientRect())')
     scrollable_center = scrolling_element.evaluate_script('(this.clientHeight / 2) + this.getBoundingClientRect().top')
-    # Firefox reports floats and can be slightly outside 1 difference - make 2 instaed
+    # Firefox reports floats and can be slightly outside 1 difference - make 2 instead
     expect(el_center).to be_within(2).of(scrollable_center)
   end
 

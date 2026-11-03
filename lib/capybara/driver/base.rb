@@ -44,7 +44,7 @@ class Capybara::Driver::Base
   end
 
   def evaluate_async_script(script, *args)
-    raise Capybara::NotSupportedByDriverError, 'Capybara::Driver::Base#evaluate_script_asnyc'
+    raise Capybara::NotSupportedByDriverError, 'Capybara::Driver::Base#evaluate_async_script'
   end
 
   def save_screenshot(path, **options)
